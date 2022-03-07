@@ -3,5 +3,5 @@ Website allows the user to select the number of dice, then roll dice. Then it sh
 
 # Technology
 Backend: JavaScript
-# 
+
 Frontend: HTML5, CSS
