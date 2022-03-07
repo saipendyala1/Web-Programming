@@ -1,0 +1,13 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+h1 {
+    font-size: 2.0em;
+    color: Navy;
+    margin-top: 0.2em;
+  }
+.error{
+color:red;
+}

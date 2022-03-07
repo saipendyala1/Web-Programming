@@ -1,0 +1,29 @@
+
+.setup{
+    background-position: center; /* Center the image */
+    background-image: url("images/background.jpg");    
+    background-repeat: no-repeat, repeat;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    }
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+input{
+    font-size: 20px;
+    
+}
+
+.error{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration-line: underline;
+    color: red;
+}
+body{
+    padding: 10mm;
+    background-color: whitesmoke;
+}

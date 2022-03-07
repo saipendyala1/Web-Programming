@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest API</title>
+    <script src="interface.js"></script>
+
+      <style>
+        body {
+          text-align: center;
+          font-family: "Helvetica", sans-serif;
+        }
+        h1 {
+          font-size: 2em;
+          font-weight: bold;
+        }
+        .box {
+          border-radius: 5px;
+          background-color: #eee;
+          padding: 20px 5px;
+        }
+        button {
+          color: white;
+          background-color: #4791d0;
+          border-radius: 5px;
+          border: 1px solid #4791d0;
+          padding: 5px 10px 8px 10px;
+        }
+        button:hover {
+          background-color: #0F5897;
+          border: 1px solid #0F5897;
+        }
+      </style>
+</head>
+<body>
+
+
+<div style="width:50%; float: left;">
+<h1>Simple Postman client</h1>
+<label for="listResources">List of Resources</label> 
+<textarea name="listResources" cols="80" rows="6" placeholder="Resources" autocomplete="on" >
+  GET -> https://student.csc.liv.ac.uk/~sgspendy/v1/readByTeam.php?id=[[TEAM_ID]]
+  GET -> https://student.csc.liv.ac.uk/~sgspendy/v1/readByPlayer.php?id=[[PLAYER_ID]]
+  GET -> https://student.csc.liv.ac.uk/~sgspendy/v1/read.php 
+  POST -> https://student.csc.liv.ac.uk/~sgspendy/v1/create.php -> {"surname":"Ruthuraj","givenname":"Gaekwad","nationality":"INDIA","dob":"1990-08-07","teamid":[[TEAM_ID]]}
+  PUT -> https://student.csc.liv.ac.uk/~sgspendy/v1/update.php -> {"id":[[PLAYER_ID]],"surname":"Ruthuraj","givenname":"Gaekwad","nationality":"AUS","dob":"1990-08-07","teamid":[[TEAM_ID]]}
+  DELETE -> https://student.csc.liv.ac.uk/~sgspendy/v1/delete.php -> { "id":[[PLAYER_ID]] }
+</textarea><br><br><br>
+  <form id="apiform">
+    <label for="resourceUrl">Resource Url</label>
+    <input type="text" name="resourceUrl" cols="80" placeholder="resource url" autocomplete="on" ><br><br>
+    <label for="method">HTTP Method</label>
+    <select name="method" placeholder="http method" autocomplete="on" >
+      <option value="POST">POST</option>
+      <option value="GET">GET</option>
+      <option value="PUT">PUT</option>
+      <option value="DELETE">DELETE</option>
+    </select><br><br>
+    <div><label for="requestBody">Request Body</label></div><br>
+    <div><textarea name="requestBody" cols="80" rows="5" placeholder="request body" autocomplete="on" ></textarea></div><br><br>
+    <input type="submit" id="sendRequest" value="Send Request"/>
+    <input type="button" id="clear" style="margin-left: 5%;" value="Clear"/>
+  </form>
+</div>  
+  <br><br><br>
+<div style="width:50%; float: right;">  
+  <div><label for="statusCode">Response Status</label></div><br>
+  <div><textarea id="statusCode" cols="5" rows="2" placeholder="status code" autocomplete="on" ></textarea></div><br><br>
+  <div><label for="responseBody">Response Body</label></div><br>
+  <div><textarea id="responseBody" cols="30" rows="10" placeholder="response body" autocomplete="on" ></textarea></div><br><br>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+

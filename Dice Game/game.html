@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="game.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <title>Dice Game</title>
+</head>
+<body>
+    <div class ="setup">
+        <h1>Let's Play!</h1>
+        <form name="form1" action="">
+            <label  for="numDice">Enter the number of dice:</label>
+            <input  id="numDice" name="numDice" type="number" value="" min=3 max=6 required/>
+            <div class="error">
+                <p id="errorMessage"></p>
+            </div>
+            <br>
+            <input type="button" value ="Roll The Dice"
+                    onclick="validateAndPlay(document.form1.numDice.value);"/> 
+        </form>
+           <div> 
+               <form>   
+                <br>
+                    <label>
+                        Number of Rounds Played: <p id="rounds"></p>
+                        balance: <p id="balance"></p>
+                        Rolled Dice: <p id= "rolleddice"></p>
+                    </label>
+                    <label  for="continue">Do you want to continue? :
+                    <input id="continue_yes" name="yes" type="button" value="YES!"
+                            onclick="rollandPlay(document.form1.numDice.value);"/>
+                    <input id="continue_no" name="no" type="button" value="NO!"/>
+                    <br>
+                    <div>
+                        <label for="avgpoints">
+                            Points won:<p id="avgpoints"></p>
+                        </label>
+                    </div>
+                    
+          </div>
+      
+    </div>
+</body>
+</html>
