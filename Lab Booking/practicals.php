@@ -36,7 +36,7 @@
         $db_hostname = "studdb.csc.liv.ac.uk";
         $db_database = "sgspendy";
         $db_username = "sgspendy";
-        $db_password = "saijet_7";
+        $db_password = "*******";
         $db_charset = "utf8mb4";
         $dsn = "mysql:host=$db_hostname;dbname=$db_database;charset=$db_charset";
         $opt = array(
